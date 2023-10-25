@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="doc/css/bootstrap.min.css" rel="stylesheet"/>
   </head>
-  <body class="container">
+  <body>
 
       <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
         <div class="container">
@@ -51,6 +51,7 @@
 </div>
 
 <!-- mon portfolio -->
+<div class="container">
 <h1 class="mt-5 fw-bold">Mon portfolio</h1>
 <p class="text-uppercase fs-4 fw-light">ce qui me definie</p>
 
@@ -90,14 +91,29 @@
                 </div>
               </div>
             </div>
-             
+            <!-- ----------- -->
+             <!--avec modals   -->
               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                   <div class="card mt-5">
                 <img src="https://picsum.photos/70/50.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title fw-bold">Projet2</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#monexemplemodal">Go modal somewhere</a>
+                  <div class="modal fade" id="monexemplemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-3" id="exampleModalLabel">Voulez-vous en savoir plus?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>relire avant de fermer</p>
+                            </div>
+
+                        </div>
+                    </div>
+                 </div>
                 </div>
               </div>
             </div>
@@ -124,8 +140,51 @@
               </div>
              </div>
       </div>
+    </div>
+
+      <!-- mon formulaire -->
+      <div class="section-contact bg-light my-5 py-5">
+        <div class="container">
+        <h1>Un projet de creation web?</h1>
+            <h2>renseignons les formulaire</h2>
+      <div class="row my-5 ">
+        <div class="col-6">
+            <img src="doc/grab-a-coffee.jpg" class="w-100" alt="">
+        </div>
+        <div class="col-6 align-items-center">
+      <form action="">
+       <div class="row gy-3 ">
+            <div class="col-6">
+               <label for="nom" class="form-label fw-bold">Nom</label>
+              <input type="text" class="form-control" id="nom">
+          </div>
+
+            <div class="col-6">
+               <label for="prenom" class="form-label fw-bold">Prenom</label>
+                <input type="text" class="form-control" id="prenom">
+            </div>
+            
+            <div class="col-12">
+              <label for="email" class="form-label fw-bold">Email</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="col-12">
+                <label for="message" class="form-label fw-bold">Message</label>
+                <textarea name="message" id="message" class="form-control" cols="30" rows="5"></textarea>
+            </div>
+             <div class="col-12"> 
+                <button type="submit" class="btn btn-primary w-100"> Envoyer</button>
+            </div>
+         </div>
+         </form>
+        </div>
+      </div>
+    </div>
+    </div>
 
       <!-- les caroussels -->
+      <div class="bg-secondary py-5">
+      <div class="container">
       <div class="my-5">
         <h1 class="fs-1 fw-bold">Les caroussels</h1>
       </div>
@@ -142,7 +201,8 @@
             </div>
         </div>
     </div>
-
+</div>
+</div>
 <!-- mes plans -->
 <div class="container-fluid my-5 pb-5 bg-body-tertiary ">
     <div class="container pt-4 fs-4" >
@@ -166,19 +226,20 @@
 </div>
 
 <!-- mon expertises -->
-<div class="container fs-3 my-5 ">
-         <p class="m-0 fs-1 fw-bold">Mon Expertises</p>
-        <p>Developpement web et design</p>
+<!-- <div class="container fs-3 my-5 ">
+        
     <div class="row justify-content-between">
         <div class="col-3 bg-secondary "> </div>      
         <div class="col-3 bg-secondary" > </div>      
         <div class="col-3 bg-secondary"> </div>      
         <div class="col-3 bg-secondary"> </div>      
     </div>
-</div>
+</div> -->
 
  <!-- --progressbar---- -->
  <div class="container">
+    <p class="m-0 fs-1 fw-bold">Mon Expertises</p>
+    <p>Developpement web et design</p>
     <div class="mb-3 p-3 bg-white">
  <div class="row align-items-center">
     <div class="col-5 col-sm-4 col-lg-3 col-xl-2 "> 
@@ -257,44 +318,66 @@
 </div>
 
     <!-- footer -->
-<div class="container bg-secondary mt-5">
-
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class="footer bg-secondary mt-5 pt-5 pb-2">
+<div class="container ">
 
     <!-- icons -->
+    <div class="row align-items-center">
+   <div class="col-12 col-md-4">
+    <a class="navbar-brand fs-3 fw-bold"> <span class="bg-primary bg-gradient rounded-3 text-light">Jone</span> Doe</a>
+    
+   </div>
+   <div class="col-12 col-md-4">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mondeuxiememodal"> recommence</button>
+
+<!-- Modal -->
+<div class="modal fade" id="mondeuxiememodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Voulez-vous recommencer?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">oui?</button>
+            <button type="button" class="btn btn-primary">non?</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------- -->
+   </div>
+   <div class="col-12 col-md-4 pb-1">
+   <label for="texte" class="fw-bold text-white fs-md-5"> ecrit un commentaire pour la page</label>
+   <textarea name="text" id="texte" cols="1" rows="2" class="w-100"></textarea>
+</div>
+</div>
     <div class="list-inline text-md-end">
         <ul>
+            <!-- tooltip -->
+            <button type="button" class=" btn" data-bs-toggle="tooltip"  data-bs-placement="top" title="facebook">
             <li class="list-inline-item">
                 <i class="bi bi-facebook"></i>
             </li>
+        </button>
+        <!-- ----- -->
             <li class="list-inline-item">
                 <i class="bi bi-instagram"></i>
             </li>
             <li class="list-inline-item">
-                <i class="bi bi-linkedin"></i>            </li>
+                <i class="bi bi-linkedin"></i>
+            </li>
         </ul>
     </div>
 </div>
-
+</div>
 
 <script src="https://kit.fontawesome.com/740f733f02.js" crossorigin="anonymous"></script>
-
-    <script src="doc/js/bootstrap.bundle.min.js">
-     </script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new 
+         bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <script src="doc/js/bootstrap.bundle.min.js"> </script>
   </body>
 </html>
